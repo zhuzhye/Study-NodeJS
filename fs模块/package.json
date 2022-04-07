@@ -1,0 +1,19 @@
+{
+  "name": "H",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01_写入文件内容.js",
+  "dependencies": {
+    "minimist": "^1.2.6",
+    "progress": "^2.0.3"
+  },
+  "devDependencies": {
+    "chalk": "^5.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

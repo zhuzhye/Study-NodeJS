@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://cdn.staticfile.org/jquery/1.10.0/jquery.js"></script>
+  </head>
+  <body>
+    <button id="btnGET">get</button>
+    <button id="btnPOST">post</button>
+    <button id="btnDELETE">DELETE</button>
+    <button id="btnJSONP">JSONP</button>
+  </body>
+  <script>
+    $(function () {
+      $("#btnGET").on("click", function () {
+        $.ajax({
+          type: "GET",
+          url: "http://192.168.4.110:7666/api/get",
+          data: { name: "zzy", age: 20 },
+          success: function (res) {
+            console.log(res);
+          },
+        });
+      });
+      $("#btnPOST").on("click", function () {
+        $.ajax({
+          type: "POST",
+          url: "http://192.168.4.110:7666/api/post",
+          data: { name: "zzzzz", age: 20 },
+          success: function (res) {
+            console.log(res);
+          },
+        });
+      });
+      $("#btnDELETE").on("click", function () {
+        $.ajax({
+          type: "DELETE",
+          url: "http://192.168.4.110:7666/api/delete",
+          data: { name: "zzzzz", age: 20 },
+          success: function (res) {
+            console.log(res);
+          },
+        });
+      });
+      $("#btnJSONP").on("click", function () {
+        $.ajax({
+          type: "GET",
+          url: "http://192.168.4.110:7666/api/jsonp",
+          dataType: "jsonp",
+          success: function (res) {
+            console.log(res);
+          },
+        });
+      });
+    });
+  </script>
+</html>
